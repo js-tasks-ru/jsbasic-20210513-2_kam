@@ -10,7 +10,17 @@ function print(text) {
  * чтобы функция sayHello работала корректно
  */
 function isValid(name) {
-  // ваш код...
+  if (name == null || name == "") {
+    alert("Имя не может быть записано.");
+    return false;
+  } else if (name.indexOf(' ') != -1) {
+    alert("Имя не может быть записано.");
+    return false;
+  } else if (name.length < 4) {
+    alert("Имя должно было больше 3 символов.");
+    return false;
+  }
+  return true;
 }
 
 function sayHello() {
